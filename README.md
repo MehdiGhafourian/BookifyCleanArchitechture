@@ -1,2 +1,2 @@
 # BookifyCleanArchitechture
-Implement sample Apartment bookin system with Clean Architechture
+Implement sample Apartment booking system with Clean Architechture
