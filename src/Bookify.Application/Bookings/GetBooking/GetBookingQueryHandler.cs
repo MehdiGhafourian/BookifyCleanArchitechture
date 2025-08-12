@@ -37,5 +37,7 @@ internal sealed class GetBookingQueryHandler(ISqlConnectionFactory sqlConnection
             {
                 request.BookingId
             });
+        
+        return booking;
     }
 }
