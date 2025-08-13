@@ -47,7 +47,7 @@ internal sealed class ReserveBookingCommandHandler(
 
         bookingRepository.Add(booking);
 
-        await unitOfWork.SaveChangeAsync(cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
         return booking.Id;
     }
