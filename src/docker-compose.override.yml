@@ -12,6 +12,7 @@ services:
       - 5432:5432
 
   bookify.api:
+    container_name: Bookify.Api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080

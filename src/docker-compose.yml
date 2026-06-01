@@ -8,7 +8,7 @@ services:
       - bookify-db
   
   bookify-db:
-    image: postgres:latest
+    image: postgres:17.5
 
 volumes:
   postgres_bookify:
