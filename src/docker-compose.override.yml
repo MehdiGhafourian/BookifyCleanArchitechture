@@ -25,3 +25,20 @@ services:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  
+  bookify-idp:
+    container_name: Bookify-Identity
+    command: start-dev --import-realm
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_DB=postgres
+      - KC_DB_URL=jdbc:postgresql://bookify-db:5432/bookify
+      - KC_DB_USERNAME=postgres
+      - KC_DB_PASSWORD=postgres
+    ports:
+      - 18080:8080
+    depends_on:
+      - bookify-db
+    volumes:
+      - ./.files/bookify-realm-export.json:/opt/keycloak/data/import/bookify-realm-export.json

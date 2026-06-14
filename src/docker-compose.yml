@@ -10,6 +10,9 @@ services:
   bookify-db:
     image: postgres:17.5
 
+  bookify-idp:
+    image: quay.io/keycloak/keycloak:26.2
+
 volumes:
   postgres_bookify:
 
