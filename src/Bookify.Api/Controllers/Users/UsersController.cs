@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bookify.Api.Controllers.Users;
 
 [ApiController]
-[Route("/api/user")]
+[Route("/api/users")]
 public class UsersController : Controller
 {
     private readonly ISender _sender;
