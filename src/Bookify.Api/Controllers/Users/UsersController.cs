@@ -33,6 +33,8 @@ public class UsersController : Controller
         return Ok(result.Value);
     }
 
+    [AllowAnonymous]
+    [HttpPost("login")]
     public async Task<IActionResult> Login(LoginUserRequest request, CancellationToken cancellationToken)
     {
         var command = new LoginUserCommand(request.Email, request.Password);
