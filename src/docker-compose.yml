@@ -13,6 +13,16 @@ services:
   bookify-idp:
     image: quay.io/keycloak/keycloak:26.2
 
+  bookify-seq:
+    image: datalust/seq:latest
+    container_name: Bookify-Seq
+    environment:
+      - ACCEPT_EULA=Y
+      - SEQ_FIRSTRUN_ADMINPASSWORD=123
+    ports:
+      - "5341:5341"
+      - 8081:80
+
 volumes:
   postgres_bookify:
 
