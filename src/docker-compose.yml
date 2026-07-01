@@ -15,13 +15,20 @@ services:
 
   bookify-seq:
     image: datalust/seq:latest
-    container_name: Bookify-Seq
+    container_name: Bookify.Seq
     environment:
       - ACCEPT_EULA=Y
       - SEQ_FIRSTRUN_ADMINPASSWORD=123
     ports:
       - "5341:5341"
       - 8081:80
+  
+  bookify-redis:
+    image: redis:7.4
+    container_name: Bookify.Redis
+    restart: always
+    ports:
+      - "6379:6379"
 
 volumes:
   postgres_bookify:
