@@ -50,13 +50,12 @@ internal sealed class AuthorizationService
         {
             return cachedPermissions;
         }
-
-        var permissions = await _dbContext.Set<User>()
+        var permissionSet = await _dbContext.Set<User>()
             .Where(user => user.IdentityId == identityId)
-            .SelectMany(user => user.Roles.Select(role => role.Permissions))
-            .FirstAsync();
-
-        var permissionSet = permissions.Select(p => p.Name).ToHashSet();
+            .SelectMany(user => user.Roles)
+            .SelectMany(role => role.Permissions)
+            .Select(permission => permission.Name)
+            .ToHashSetAsync();
 
         await _cacheService.SetAsync(cacheKey, permissionSet);
 
