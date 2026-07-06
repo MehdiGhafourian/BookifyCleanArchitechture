@@ -1,9 +1,7 @@
-﻿using System.Text.Json;
-using Bookify.Application.Abstractions.Clock;
+﻿using Bookify.Application.Abstractions.Clock;
 using Bookify.Application.Exceptions;
 using Bookify.Domain.Abstractions;
 using Bookify.Infrastructure.Outbox;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
