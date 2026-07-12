@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.3.11512.155 d18.3
+VisualStudioVersion = 18.3.11512.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Domain.UnitTests", "..\test\Bookify.Domain.UnitTests\Bookify.Domain.UnitTests.csproj", "{A23D7EEF-ABE8-47D4-A826-BA25958CEF5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Application.UnitTests", "..\test\Bookify.Application.UnitTests\Bookify.Application.UnitTests.csproj", "{F327C9E5-EBD8-4CD8-8AFB-79698C13CCD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{A23D7EEF-ABE8-47D4-A826-BA25958CEF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A23D7EEF-ABE8-47D4-A826-BA25958CEF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A23D7EEF-ABE8-47D4-A826-BA25958CEF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F327C9E5-EBD8-4CD8-8AFB-79698C13CCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F327C9E5-EBD8-4CD8-8AFB-79698C13CCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F327C9E5-EBD8-4CD8-8AFB-79698C13CCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F327C9E5-EBD8-4CD8-8AFB-79698C13CCD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{975591C3-7CCA-4785-97FF-DB73CC2CE07A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{45718D3B-962C-4939-9F73-2A619FF0AD66} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{A23D7EEF-ABE8-47D4-A826-BA25958CEF5D} = {DA84CCC6-F200-45AA-883B-05030414EAE4}
+		{F327C9E5-EBD8-4CD8-8AFB-79698C13CCD3} = {DA84CCC6-F200-45AA-883B-05030414EAE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C2FBE9B-2C53-4536-8CB4-E2F845A62531}
