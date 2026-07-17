@@ -5,7 +5,7 @@ using Bookify.Domain.Users;
 
 namespace Bookify.Application.Users.RegisterUser;
 
-public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand, Guid>
+internal sealed class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand, Guid>
 {
     private readonly IAuthenticationService _authenticationService;
     private readonly IUserRepository _userRepository;
